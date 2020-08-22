@@ -1,0 +1,4 @@
+enum Sport{
+  volleyball,
+  badminton
+}

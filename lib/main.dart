@@ -1,67 +1,95 @@
+import 'package:coachapp/models/programBox.dart';
+import 'package:coachapp/models/style.dart';
 import 'package:flutter/material.dart';
-//test
-void main() {
-  runApp(MyApp());
-}
+
+void main() => runApp(MyApp());
+
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'CoachMe',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
+class MyHomePage extends StatefulWidget{
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
+class _MyHomePageState extends State<MyHomePage>{
+  List <Widget> pages = [
+//    MainPage(),
+//    PlayPage(),
+//    MakeProgramPage(),
+//    MakeExercisePage(),
+  ];
   @override
-  Widget build(BuildContext context) {
-
+  Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text("Select Program"),
+        backgroundColor: Color(style().greenColor),
+        toolbarHeight: style().barHeight,
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+
+      body: Container(
+          child: ListView(
+            children: <Widget>[
+              Column(
+                children: <Widget>[
+
+                ],
+              )
+            ],
+          )
+      ),
+
+      bottomNavigationBar: Container(
+        color: Color(style().greenColor),
+        height: style().barHeight,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
+            IconButton(
+              iconSize: style().iconSize,
+              onPressed: test,
+              icon: Icon(Icons.add,
+                  color: style().iconColor),
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+            IconButton(
+              iconSize: style().iconSize,
+              onPressed: test,
+              icon: Icon(Icons.play_arrow,
+                  color: style().iconColor),
             ),
+            IconButton(
+              iconSize: style().iconSize,
+              onPressed: test,
+              icon: Icon(Icons.cancel,
+                  color: style().iconColor),
+            ),
+
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
+  void test(){
+    print("test");
+
+  }
 }
+
+
+
+
+
+
