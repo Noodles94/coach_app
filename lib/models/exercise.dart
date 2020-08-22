@@ -12,5 +12,5 @@ class Exercise{
   AssetImage exerciseImage;
 
   Exercise(this.exerciseTitle, this.exerciseDuration, this.exerciseDescription,
-      this.exerciseForSport, this.favorite, this.exerciseImage);
+      this.exerciseForSport,  this.exerciseImage);
 }

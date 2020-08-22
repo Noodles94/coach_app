@@ -17,6 +17,6 @@ class Program{
   List<Exercise> exercises;
   Sport programSport;
 
-  Program(this.programImg, this.programDuration, this.programTitle, this.programDescription,
-      this.programLevel, this.programCreatedOnDate, this.programCreatedByUser, this.exercises, this.programSport);
+  Program(this.programImg, this.programTitle, this.programDescription,
+      this.programLevel, this.programCreatedOnDate, this.programCreatedByUser, this.programSport);
 }

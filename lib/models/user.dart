@@ -12,5 +12,5 @@ class User{
   List<Sport> coachForTheseSports;
 
   int minutesCoached;
-
+  User(this.nickName);
 }
