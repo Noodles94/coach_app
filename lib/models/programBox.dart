@@ -7,7 +7,7 @@ class ProgramBox extends StatelessWidget{
       body: Container(
         height: 105,
         width: 330,
-        color: Color(style().lightblueColor),
+        color: Color(Style().lightblueColor),
         child: Row(
           //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
@@ -20,14 +20,14 @@ class ProgramBox extends StatelessWidget{
             Column(
               children: <Widget>[
                 IconButton(
-                  iconSize: style().iconSize,
+                  iconSize: Style().iconSize,
                   icon: Icon(Icons.edit,
-                      color: style().iconColor),
+                      color: Style().iconColor),
                 ),
                 IconButton(
-                  iconSize: style().iconSize,
+                  iconSize: Style().iconSize,
                   icon: Icon(Icons.pin_drop,
-                      color: style().iconColor),
+                      color: Style().iconColor),
                 ),
               ],
             ),
@@ -43,7 +43,7 @@ Widget build(BuildContext context){
     body: Container(
       height: 105,
       width: 330,
-      color: Color(style().lightblueColor),
+      color: Color(Style().lightblueColor),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
@@ -56,14 +56,14 @@ Widget build(BuildContext context){
           Column(
             children: <Widget>[
               IconButton(
-                iconSize: style().iconSize,
+                iconSize: Style().iconSize,
                 icon: Icon(Icons.edit,
-                    color: style().iconColor),
+                    color: Style().iconColor),
               ),
               IconButton(
-                iconSize: style().iconSize,
+                iconSize: Style().iconSize,
                 icon: Icon(Icons.pin_drop,
-                    color: style().iconColor),
+                    color: Style().iconColor),
               ),
             ],
           ),

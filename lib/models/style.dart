@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-class style{
+class Style{
   int _greenColor = 0xff00B071;
   int _lightblueColor =0xffDCF5F7;
   int _darkblueColor = 0xff076498;

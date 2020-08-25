@@ -8,8 +8,11 @@ import 'package:coachapp/models/sport.dart';
 import 'package:coachapp/models/user.dart';
 import 'package:flutter/cupertino.dart';
 
-User user1 = new User("Bengen");
-Program badmintonProgram1 = new Program(new AssetImage('lib/assets/plusImage.png'), "Badminton1","This is badminton1", 1, DateTime.now(), user1, Sport.volleyball);
+User user1 = new User("Bengen", testPrograms);
+List<Program> testPrograms = [
+   new Program(new AssetImage('lib/assets/plusImage.png'), "Badminton1","This is badminton1", 1, DateTime.now(), user1, Sport.volleyball)
+];
+//Program badmintonProgram1 = new Program(new AssetImage('lib/assets/plusImage.png'), "Badminton1","This is badminton1", 1, DateTime.now(), user1, Sport.volleyball);
 List<Exercise> badmintonExercises = [
   new Exercise("Serves", 5, "This is servPractice", Sport.badminton, new AssetImage('lib/assets/plusImage.png')
 ),

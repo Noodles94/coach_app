@@ -1,6 +1,8 @@
 import 'package:coachapp/models/programBox.dart';
 import 'package:coachapp/models/style.dart';
 import 'package:flutter/material.dart';
+import 'package:coachapp/models/testObjects.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -35,46 +37,45 @@ class _MyHomePageState extends State<MyHomePage>{
     return Scaffold(
       appBar: AppBar(
         title: Text("Select Program"),
-        backgroundColor: Color(style().greenColor),
-        toolbarHeight: style().barHeight,
+        backgroundColor: Color(Style().greenColor),
+        toolbarHeight: Style().barHeight,
       ),
 
       body: Container(
+        alignment: Alignment.center,
           child: ListView(
             children: <Widget>[
               Column(
-                children: <Widget>[
-
-                ],
+                children: getPrograms(context),
               )
             ],
           )
       ),
 
       bottomNavigationBar: Container(
-        color: Color(style().greenColor),
-        height: style().barHeight,
+        color: Color(Style().greenColor),
+        height: Style().barHeight,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             IconButton(
-              iconSize: style().iconSize,
+              iconSize: Style().iconSize,
               onPressed: test,
               icon: Icon(Icons.add,
-                  color: style().iconColor),
+                  color: Style().iconColor),
             ),
             IconButton(
-              iconSize: style().iconSize,
+              iconSize: Style().iconSize,
               onPressed: test,
               icon: Icon(Icons.play_arrow,
-                  color: style().iconColor),
+                  color: Style().iconColor),
             ),
             IconButton(
-              iconSize: style().iconSize,
+              iconSize: Style().iconSize,
               onPressed: test,
               icon: Icon(Icons.cancel,
-                  color: style().iconColor),
+                  color: Style().iconColor),
             ),
 
           ],
@@ -84,6 +85,11 @@ class _MyHomePageState extends State<MyHomePage>{
   }
   void test(){
     print("test");
+
+  }
+
+  List<Widget> getPrograms(BuildContext context) {
+    List<Widget> programs = [];
 
   }
 }

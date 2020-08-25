@@ -8,9 +8,10 @@ class User{
   String firstName;
   String secondName;
   List<Exercise> favoriteExercises;
+  List<Program> allPrograms;
   List<Program> favoritePrograms;
   List<Sport> coachForTheseSports;
 
   int minutesCoached;
-  User(this.nickName);
+  User(this.nickName, this.allPrograms);
 }
